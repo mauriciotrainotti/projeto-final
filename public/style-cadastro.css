@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: rgb(17, 48, 36);
+    color: white;
+}
+
+.campo-cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    height:80vh;
+    width: 30vw;
+    background-color: rgb(55, 97, 95);
+    border-radius: 20px; 
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.texto-cadastro{
+    font-size: 20px;
+    margin-top: 5vh;
+}

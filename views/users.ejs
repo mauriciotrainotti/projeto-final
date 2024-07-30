@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Users</title>
+</head>
+<body>
+  <h1>Usuários Cadastrados</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Usuário</th>
+        <th>Email</th>
+        <th>Endereço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach(function(user) { %>
+        <tr>
+          <td><%= user.usuario %></td>
+          <td><%= user.email %></td>
+          <td><%= user.endereco %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <form action="/limpar" method="post">
+    <button type="submit">Limpar</button>
+  </form>
+</body>
+</html>

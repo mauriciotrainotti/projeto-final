@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizar cadastro</title>
+    <link rel="stylesheet" href="style-cadastro.css">
+</head>
+<body>
+    <h1>Realizar cadastro</h1>
+    <div class="campo-cadastro">
+        <form action="/register" method="post">
+            <h1 class="texto-cadastro">Digite seu nome de usuário</h1>
+            <input type="text" name="usuario" required>
+            <h1 class="texto-cadastro">Digite seu email</h1>
+            <input type="text" name="email" required>
+            <h1 class="texto-cadastro">Digite seu endereço</h1>
+            <input type="text" name="endereco" required>
+            <h1 class="texto-cadastro">Digite sua senha</h1>
+            <input type="password" name="senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
