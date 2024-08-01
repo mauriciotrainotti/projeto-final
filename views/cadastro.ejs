@@ -9,6 +9,9 @@
 <body>
     <h1>Realizar cadastro</h1>
     <div class="campo-cadastro">
+        <% if (error) { %>
+            <div style="color: red;"><%= error %></div>
+        <% } %>
         <form action="/register" method="post">
             <h1 class="texto-cadastro">Digite seu nome de usuário</h1>
             <input type="text" name="usuario" required>

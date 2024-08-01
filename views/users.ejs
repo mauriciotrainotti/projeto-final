@@ -11,6 +11,7 @@
         <th>Usuário</th>
         <th>Email</th>
         <th>Endereço</th>
+        <th>Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -19,6 +20,14 @@
           <td><%= user.usuario %></td>
           <td><%= user.email %></td>
           <td><%= user.endereco %></td>
+          <td>
+            <form action="/edit/<%= user.id %>" method="get" style="display:inline;">
+              <button type="submit">Editar</button>
+            </form>
+            <form action="/delete/<%= user.id %>" method="post" style="display:inline;">
+              <button type="submit">Excluir</button>
+            </form>
+          </td>
         </tr>
       <% }); %>
     </tbody>

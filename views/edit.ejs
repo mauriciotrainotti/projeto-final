@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Editar Usuário</h1>
+    <div class="campo-cadastro">
+        <form action="/edit/<%= user.id %>" method="post">
+            <h1 class="texto-cadastro">Nome de Usuário</h1>
+            <input type="text" name="usuario" value="<%= user.usuario %>" required>
+            <h1 class="texto-cadastro">Email</h1>
+            <input type="text" name="email" value="<%= user.email %>" required>
+            <h1 class="texto-cadastro">Endereço</h1>
+            <input type="text" name="endereco" value="<%= user.endereco %>" required>
+            <h1 class="texto-cadastro">Senha</h1>
+            <input type="password" name="senha" value="<%= user.senha %>" required>
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+</body>
+</html>
