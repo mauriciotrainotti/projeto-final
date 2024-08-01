@@ -5,32 +5,78 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: rgb(17, 48, 36);
+    background: linear-gradient(135deg, #2c3e50, #4c669f, #192f6a);
     color: white;
 }
 
 .campo-cadastro {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
     margin-top: 20px;
-    height:80vh;
-    width: 30vw;
-    background-color: rgb(55, 97, 95);
-    border-radius: 20px; 
+    height: auto; /* Ajusta a altura automaticamente */
+    width: 50vw; /* Aumenta a largura da caixa de cadastro */
+    max-width: 1000px; /* Limite máximo de largura para a caixa */
+    background-color: #1a1a1a; /* Caixa com fundo escuro */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efeito de profundidade */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    width: 80%;
+    gap: 20px; /* Espaçamento vertical entre os inputs e o botão */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza horizontalmente os itens dentro do form-group */
+    width: 100%; /* Faz com que a form-group ocupe toda a largura disponível */
+}
+
+.texto-cadastro {
+    font-size: 16px; /* Fonte mais fina */
+    margin: 0  20 10px 0; /* Margem para espaçamento entre texto e input */
+    font-weight: 300; /* Fonte mais fina */
+    width: 50%; /* Largura da label para garantir centralização */
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
 input {
-    margin: 10px 0;
     padding: 10px;
     font-size: 16px;
-    width: 200px;
+    width: 50%; /* Faz com que o input ocupe toda a largura disponível */
+    max-width: 400px; /* Largura máxima dos inputs */
     box-sizing: border-box;
     border-radius: 10px;
+    border: 1px solid #444; /* Borda sutil para os inputs */
 }
-.texto-cadastro{
-    font-size: 20px;
-    margin-top: 5vh;
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    width: 50%; /* Faz com que o botão ocupe toda a largura disponível */
+    max-width: 400px; /* Largura máxima do botão */
+    border-radius: 10px;
+    border: none;
+    background-color: #6600cc; /* Cor roxa para o botão */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5500a3; /* Cor um pouco mais escura no hover */
+}
+
+div[style] {
+    margin-bottom: 20px; /* Margem para mensagens de erro */
+    width: 100%; /* Faz com que a mensagem ocupe toda a largura disponível */
+    max-width: 400px; /* Largura máxima para a mensagem de erro */
 }

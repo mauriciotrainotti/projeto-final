@@ -4,17 +4,22 @@ const db = require('../db');  // Importar o banco de dados
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('login', { title: 'Express' });
+  res.render('login', { title: 'Express'  });
 });
 
 /* GET cadastro page. */
 router.get('/cadastro', function(req, res, next) {
-  res.render('cadastro', { title: 'Express' });
+  res.render('cadastro', { title: 'Express',  error: null  });
 });
 
 /* GET home page. */
-router.get('/home', function(req, res, next) {
-  res.render('home', { title: 'Express' });
+router.get('/home', (req, res) => {
+  // Verificar se o usuário está autenticado e se o nome de usuário está na sessão
+  if (req.session && req.session.usuario) {
+    res.render('home', { usuario: req.session.usuario });
+  } else {
+    res.redirect('/login'); // Redirecionar para a página de login se o usuário não estiver autenticado
+  }
 });
 
 // Página de cadastro
@@ -114,10 +119,11 @@ router.post('/login', (req, res) => {
   db.get('SELECT * FROM users WHERE usuario = ? AND senha = ?', [usuario, senha], (err, row) => {
     if (err) {
       console.error(err.message);
-      return res.status(500).send('Error logging in');
+      return res.status(500).send('Erro ao fazer login');
     }
     if (row) {
-      res.redirect('/home');  // Redireciona para a página home se o login for bem-sucedido
+      req.session.username = usuario;  // Configurar o nome de usuário na sessão
+      res.redirect('/home');  // Redireciona para a página inicial se o login for bem-sucedido
     } else {
       res.send('Usuário ou senha incorretos');  // Mostra mensagem de erro
     }

@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="style-home.css">
 </head>
 <body>
-    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.casaharmonia.com.br%2Fadesivos-de-parede%2Fadesivo-decorativo-de-parede-frases-bem-vindo-2&psig=AOvVaw1LMlOCp9QwNT-z06XpN4g8&ust=1722430505165000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLj1p-fnzocDFQAAAAAdAAAAABAJ" alt="bem vindo">
+    <div class="container">
+        <h1>Bem-vindo, <%= usuario %>!</h1>
+        <p>Estamos felizes em tê-lo de volta. Explore nosso site e aproveite os recursos disponíveis.</p>
+        <a href="/logout" class="logout-button">Sair</a>
+    </div>
 </body>
 </html>
