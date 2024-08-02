@@ -51,21 +51,21 @@ form {
 }
 
 input {
-    padding: 10px;
+    padding: 15px;
     font-size: 16px;
     width: 50%; /* Faz com que o input ocupe toda a largura disponível */
     max-width: 400px; /* Largura máxima dos inputs */
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid #444; /* Borda sutil para os inputs */
 }
 
 button {
-    padding: 10px;
+    padding: 15px;
     font-size: 16px;
     width: 50%; /* Faz com que o botão ocupe toda a largura disponível */
     max-width: 400px; /* Largura máxima do botão */
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     background-color: #6600cc; /* Cor roxa para o botão */
     color: white;
