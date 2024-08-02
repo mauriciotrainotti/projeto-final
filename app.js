@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session'); // Importar express-session
 
+
 var indexRouter = require('./routes/index');
 
 var app = express();
@@ -18,6 +19,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Configuração do middleware de sessão
+app.use(session({
+  secret: 'your-secret-key', // Altere para uma chave secreta real
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false } // Defina como true se estiver usando HTTPS
+}));
 
 app.use('/', indexRouter);
 

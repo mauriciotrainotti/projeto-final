@@ -6,11 +6,21 @@
     <title>Home</title>
     <link rel="stylesheet" href="style-home.css">
 </head>
+<header>
+    <div class="cabecalho">
+        <div class="dropdown">
+            <button class="botao-minha-conta">Minha Conta</button>
+            <div class="dropdown-content">
+                <a href="/users">Usuários</a>
+            </div>
+        </div>
+    </div>
+</header>
 <body>
-    <div class="container">
+        
         <h1>Bem-vindo, <%= usuario %>!</h1>
         <p>Estamos felizes em tê-lo de volta. Explore nosso site e aproveite os recursos disponíveis.</p>
-        <a href="/logout" class="logout-button">Sair</a>
+
     </div>
 </body>
 </html>

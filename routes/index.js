@@ -18,7 +18,7 @@ router.get('/home', (req, res) => {
   if (req.session && req.session.usuario) {
     res.render('home', { usuario: req.session.usuario });
   } else {
-    res.redirect('/login'); // Redirecionar para a página de login se o usuário não estiver autenticado
+    res.redirect('/'); // Redirecionar para a página de login se o usuário não estiver autenticado
   }
 });
 
@@ -122,7 +122,7 @@ router.post('/login', (req, res) => {
       return res.status(500).send('Erro ao fazer login');
     }
     if (row) {
-      req.session.username = usuario;  // Configurar o nome de usuário na sessão
+      req.session.usuario = usuario;  // Configurar o nome de usuário na sessão
       res.redirect('/home');  // Redireciona para a página inicial se o login for bem-sucedido
     } else {
       res.send('Usuário ou senha incorretos');  // Mostra mensagem de erro

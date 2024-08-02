@@ -20,7 +20,7 @@ body {
     height: auto; /* Ajusta a altura automaticamente */
     width: 50vw; /* Aumenta a largura da caixa de cadastro */
     max-width: 1000px; /* Limite máximo de largura para a caixa */
-    background-color: #1a1a1a; /* Caixa com fundo escuro */
+    background-color: #000000; /* Caixa com fundo escuro */
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efeito de profundidade */
@@ -47,6 +47,7 @@ form {
     font-weight: 300; /* Fonte mais fina */
     width: 50%; /* Largura da label para garantir centralização */
     text-align: left; /* Alinha o texto à esquerda */
+    color: #ccc;
 }
 
 input {
